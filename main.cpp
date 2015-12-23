@@ -23,10 +23,12 @@ int main(){
     ->add("}")
     ->DEBUG();
 
-    t_parsing parseur;
     string pattern;
-    cout << "pattern : ";
+    cout << "$>Entrey un pattern : ";
     cin >> pattern;
+    cout << endl;
+
+    t_parsing parseur;
     *code = parseur.getContext("parsingClass.cpp").inNamespace("parsingClass").searchFunction(pattern);
     t_instruction code2 = parseur.getContext("parsingClass.h").inNamespace("parsingClass").searchPrototype(pattern);
 
