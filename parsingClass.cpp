@@ -88,7 +88,7 @@ t_instruction parsingClass::searchPrototype(const std::string& fonction){
     _contexted_file.open(_context, std::fstream::in |  std::fstream::app);
 
     string line;
-    //considering cpp file
+    //considering h file
     while(_contexted_file.good() && !found){
         i++;
         getline(_contexted_file,line);
